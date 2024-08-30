@@ -24,9 +24,9 @@ const SearchItem = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `https://node-js-app-liard.vercel.app/api/items/search?name=`,
+          `https://node-js-app-liard.vercel.app/api/items/search`,
           {
-            params: { q: query },
+            params: { name: query },
           }
         );
         console.log(response.data); // Check the structure of the data here
